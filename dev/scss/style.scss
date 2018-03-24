@@ -27,6 +27,7 @@
 	font-weight: bold;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: 'ProximaNovaregular';
 	src: url('../fonts/proximanova_regular.otf') format('opentype');
@@ -91,8 +92,24 @@
 		border: 1px solid #d90603;
 		padding-bottom: 6px;
 		// display:block;
-
-
+	}
+	&__red{
+		background-color: #d80303;
+		color: white;
+	}
+	&__grey{
+		color: white;
+		background-color: #7b7b7b;
+		padding: 10px;
+		&:after{
+			content: "\203A";
+			font-size: 2em;
+			display: inline-block;
+			margin-top: -5px;
+			position: relative;
+			top: 2px;
+			left: 5px;
+		}
 	}
 }
 .whyus{
@@ -123,4 +140,56 @@
 		width:2000px;
 		top:50%;
 	}
+
+}
+.wrapper-form{
+	background-color: #f3f3f3;
+	padding: 100px 0;
+}
+.title{
+	text-align: center;
+	&__text{
+		font-size: 3em;
+		text-transform: uppercase;
+		margin: 30px;
+	}
+}
+form{
+	text-align: center;
+	
+	a{
+		margin: 10px;
+		color: gray;
+	}
+	.tip{
+		display: inline-block;
+		width: 250px;
+		margin-top: -30px;
+		color: gray;
+		font-style: oblique;
+		text-align: justify;
+	}
+	
+	input{
+		max-width: 100%;
+		display: inline-block;
+		&[type="text"]{
+			display: block;
+			margin: 40px auto;
+			height: 35px;
+			width:250px;
+			
+		}
+		
+		
+	}
+	@include breakpoint(tablet){
+		.form__wrap{text-align: left;}
+	}
+}
+.footer{
+	color: white;
+	text-align: center;
+	background: #1c1d30;
+	padding: 30px;
 }
