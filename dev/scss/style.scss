@@ -17,21 +17,120 @@
 }
 @font-face {
 	font-family: 'BebasNeue';
-	src: url('../fonts/babasneue_regular.otf') format('opentype');
+	src: url('../fonts/bebasneue_regular.otf') format('opentype');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'ProximaNova';
+	font-family: 'ProximaNovaBold';
 	src: url('../fonts/proximanova_bold.otf') format('opentype');
 	font-weight: bold;
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'ProximaNovaregular';
+	src: url('../fonts/proximanova_regular.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+*{
+	font-family: 'ProximaNovaregular';
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+.header{
+	background: url(../images/background_01.png);
+	background-size: auto;
+	background-position-x: center;
+	&__top{
+		text-align: center;
+		padding: 30px 0;
+		border-bottom: 1px solid rgba(255, 255, 255, .2);
+		margin-bottom: 30px;
+		img{
+			margin-bottom: 30px;
+		}
+		a{
+			margin-bottom: 30px;
+		}
+	}
+	&__middle{
+		padding-top: 65px;
+		text-align: center;
+	}
+	&__info{
+		margin-bottom:67px;
+	}
+	&__text{
+		font-size: 24px;
+		color: #fff;
+	}
+
+}
+.btn{
+	font-family:'ProximaNovaBold';
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 20px 40px;
+	text-decoration: none;
+	border-radius: 3px;
+	&_open{
+		color: #000;
+		background: #f3c128;
+		font-size: 14px;
+	}
+	&_j2t{
+		font-family: 'BebasNeue';
+		background: linear-gradient(to right, rgba(239,55,0,1) 0%,rgba(217,6,3,1) 100%);
+		color: #fff;
+		font-size: 75px;
+		margin-bottom: 30px; 
+		border-radius: 0;
+		border: 1px solid #d90603;
+		padding-bottom: 6px;
+		// display:block;
+
+
+	}
+}
+.whyus{
+	text-align:center;
+	font-size: 24px;
+	display:inline-block;
+	position:relative;
+	text-transform: uppercase;
+	color: #fff;
+	margin-bottom:50px;
+	&:after{
+		content: '';
+		position:absolute;
+		height:1px;
+		background:rgba(255, 255, 255, .2);
+		left:auto;
+		right:100%;
+		width:2000px;
+		top:50%;
+	}
+	&:before{
+		content: '';
+		position:absolute;
+		height:1px;
+		background:rgba(255, 255, 255, .2);
+		left:100%;
+		right:auto;
+		width:2000px;
+		top:50%;
+	}
+>>>>>>> c35f27a29d1328dd23d2014fd1ee9ccdf2f22473
+}
 .wrapper-form{
 	background-color: #f3f3f3;
 	padding: 100px 0;
 }
+
 form{
 	text-align: center;
 	
