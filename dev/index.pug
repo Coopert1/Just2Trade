@@ -22,11 +22,19 @@ html
 						|для выгодной торговли на рынке форекс
 				.whyus
 					|Почему Just2Trade?
+		.title
+			.title__btn.btn.btn__red Для профессионалов
+			.title__text Фондового рынка
 		.wrapper-form
 			.wrapper
+				.title
+					.title__btn.btn.btn__red Отправте заявку на открытие
+					.title__text индывыдуального счета
+					
 				form
-					input#start-form(type="checkbox")
-					label(for="start-form") Продолжыть заполнение анкети
+					.form__wrap
+						input#start-form(type="checkbox")
+						label(for="start-form") Продолжыть заполнение анкети
 					.row.clearfix
 						.col-phablet-1-2.col-tablet-1-3
 							input(type="text" placeholder="Фамилія *")
@@ -40,11 +48,13 @@ html
 						.col-tablet-1-3
 							input(type="text" placeholder="Подтвердите Email *")
 							input(type="text" placeholder="CMS Код *")
-					input#confirm-form(type="checkbox")
-					label(for="confirm-form") Я потдверджаю что согласен с
-					a(href="#") Политикой конфиденциальности
-					span и
-					a(href="#") Общими правилами
-					a.btn(href="#") Следующий шаг
+					.form__wrap
+						input#confirm-form(type="checkbox")
+						label(for="confirm-form") Я потдверджаю что согласен с
+						a(href="#") Политикой конфиденциальности
+						span и
+						a(href="#") Общими правилами
+						br
+						a.btn.btn__grey(href="#") Следующий шаг
 
 		.footer © Just2Trade, 2018.
