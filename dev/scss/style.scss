@@ -87,7 +87,7 @@ img{
 			margin-bottom: 30px;
 		}
 		img{
-			margin-bottom: 15px;
+			// margin-bottom: 15px;
 			@include breakpoint(phablet){
 				margin: 0;
 				position: relative;
@@ -95,7 +95,7 @@ img{
 			}
 		}
 		a{
-			margin-bottom: 15px;
+			// margin-bottom: 15px;
 			@include breakpoint(phablet){
 				margin:0;
 			}
@@ -135,6 +135,7 @@ img{
 	text-decoration: none;
 	border-radius: 3px;
 	&_open{
+		padding: 15px 20px;
 		color: #000;
 		background: #f3c128;
 		font-size: 14px;
@@ -214,7 +215,7 @@ img{
 .why-us-advantage{
 	position:relative;
 	padding-left: 70px;
-	margin-bottom: 20px;
+	// margin-bottom: 20px;
 	@include breakpoint(phablet){
 		margin: 0;
 	}
@@ -229,11 +230,47 @@ img{
 		line-height: 26px;   
 	}
 }
+ .profit{
+ 	text-align:center;
+ 	table{
+ 		margin: auto;
+ 		width:60%;
+ 		text-align:center;
+ 		border-collapse: collapse;
+ 		th{
+ 			font-size:12px;
+ 			text-transform: uppercase;
+ 			padding: 20px 5px;
+			border: 1px solid #d0d0d0;
+			&:first-child,&:last-child{
+				background: #1c1d30;
+				color: #fff;
+
+			}
+			&:nth-child(2),&:nth-child(3){
+				background: #36397a;
+				color: #fff;
+
+			}
+ 		}
+		td{
+			width: 25%;
+			padding: 20px 0;
+ 			border: 1px solid #d0d0d0;
+			&:first-child{
+				background: #f1f4f7;
+			}
+ 			&:last-child{
+				color: #1aa000;
+ 			}
+ 		}
+ 	}
+ }
 .count-type{
 	text-align: center;
 	padding: 30px;
 	border-radius: 5px;
-	box-shadow: 0px 2px 10px -5px rgba(0,0,0,0.5);
+	box-shadow: 0px 1px 12px -4px rgba(0,0,0,0.5);
 	hr{
 		border: none;
 		background-color: #ccc;
@@ -242,7 +279,7 @@ img{
 		margin: 0 -30px;
 	}
 	&:hover{
-		box-shadow: 0px 2px 14px 0px rgba(0,0,0,0.5);
+		box-shadow: 0px 1px 14px 0px rgba(0,0,0,0.5);
 	}
 	&__title{
 		font-size: 1.5em;
@@ -260,23 +297,30 @@ img{
 		// border-bottom: 2px solid  #cccccc;
 	}
 	&__list{
-		// border-bottom: 2px solid  #cccccc;
+		table{
+			width: 100%;
+			border-spacing: 0px 20px;
+			tr{
+				padding: 10px 0;
+			}
+			td:last-child{
+				text-align: right;
+			}
+		}
 	}
 	&__btn{
 		text-align: left;
 		padding: 40px 0;
 		a{
-			padding: 20px 20px;
+			padding: 15px 20px;
 			font-weight: bold;
 		}
 	}
 	.btn_demo{
 		border: 2px solid #f3c128;
 		color: black;
-		padding: 17px 40px;
+		padding: 15px 20px;
 		float: right;
-		position: relative;
-		top: 2px;
 		&:hover{
 			outline:none;
 			color: #fff;
