@@ -41,8 +41,14 @@
 	border: 0;
 	box-sizing: border-box;
 }
-img{max-width: 100%;}
-.strong{margin: 0 5px;font-weight: bold;}
+img{
+	max-width: 100%;
+}
+.strong{
+	margin: 0 5px;
+	font-weight: bold;
+}
+
 .section{
 	padding-bottom: 140px;
 	&-marketplace{
@@ -67,29 +73,57 @@ img{max-width: 100%;}
 .header{
 	background: url(../images/background_01.png);
 	background-size: auto;
+	background-repeat: no-repeat;
+	background-position-y: top;
 	background-position-x: center;
 	&__top{
 		text-align: center;
-		padding: 30px 0;
+		padding: 15px 0;
 		border-bottom: 1px solid rgba(255, 255, 255, .2);
 		margin-bottom: 30px;
-		img{
+		@include breakpoint(phablet){
+			text-align: center;
+			padding: 15px 0;
 			margin-bottom: 30px;
 		}
+		img{
+			margin-bottom: 15px;
+			@include breakpoint(phablet){
+				margin: 0;
+				position: relative;
+				top: 20px;
+			}
+		}
 		a{
-			margin-bottom: 30px;
+			margin-bottom: 15px;
+			@include breakpoint(phablet){
+				margin:0;
+			}
 		}
 	}
 	&__middle{
-		padding-top: 65px;
+		padding-top: 30px;
 		text-align: center;
+		@include breakpoint(phablet){
+				padding-top: 85px;
+			}
+	}
+	&__bottom{
+		background:rgba(255, 255, 255, .2);
+		padding:20px 0;
 	}
 	&__info{
-		margin-bottom:67px;
+		margin-bottom:30px;
+		@include breakpoint(phablet){
+				margin-bottom:77px;
+		}
 	}
 	&__text{
-		font-size: 24px;
+		font-size: 18px;
 		color: #fff;
+		@include breakpoint(phablet){
+			font-size: 24px;
+		}
 	}
 
 }
@@ -104,17 +138,26 @@ img{max-width: 100%;}
 		color: #000;
 		background: #f3c128;
 		font-size: 14px;
+		border: 2px solid #f3c128;
+		&:hover{
+			border: 2px solid #363636;
+		}
 	}
 	&_j2t{
 		font-family: 'BebasNeue';
 		background: linear-gradient(to right, rgba(239,55,0,1) 0%,rgba(217,6,3,1) 100%);
 		color: #fff;
-		font-size: 75px;
+		font-size: 45px;
 		margin-bottom: 30px; 
 		border-radius: 0;
 		border: 1px solid #d90603;
-		padding-bottom: 6px;
+		padding-bottom: 10px;
 		// display:block;
+		@include breakpoint(phablet){
+			font-size: 75px;
+			margin-bottom: 30px; 
+			padding-bottom: 6px;
+		}
 	}
 	&__red{
 		background-color: #d80303;
@@ -141,14 +184,15 @@ img{max-width: 100%;}
 	}
 	
 }
-.whyus{
+.why-us{
 	text-align:center;
 	font-size: 24px;
 	display:inline-block;
+	overflow: hidden;
 	position:relative;
 	text-transform: uppercase;
 	color: #fff;
-	margin-bottom:50px;
+	margin-bottom:30px;
 	&:after{
 		content: '';
 		position:absolute;
@@ -169,8 +213,27 @@ img{max-width: 100%;}
 		width:2000px;
 		top:50%;
 	}
-
 }
+
+.why-us-advantage{
+	position:relative;
+	padding-left: 70px;
+	margin-bottom: 20px;
+	@include breakpoint(phablet){
+		margin: 0;
+	}
+	img{
+		position: absolute;
+		top:0;
+		// margin-top:-20px;
+		left:0;
+	}
+	span{
+		color: #fff;
+		line-height: 26px;
+	}
+}
+
 
 .offer{
 	background-image: url(../images/background_02.png);
@@ -201,12 +264,22 @@ img{max-width: 100%;}
 		
 	}
 }
-.forest-type{
+
+.count-type{
 	text-align: center;
-	padding: 40px 10px;
-	box-shadow: 0 10px 10px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.1);
-	&:hover{box-shadow: 0 24px 60px rgba(0,0,0,0.25), 0 20px 20px rgba(0,0,0,0.1);}
+	padding: 30px;
 	border-radius: 5px;
+	box-shadow: 0px 2px 10px -5px rgba(0,0,0,0.5);
+	hr{
+		border: none;
+		background-color: #ccc;
+		color: #ccc;
+		height: 2px; 
+		margin: 0 -30px;
+	}
+	&:hover{
+		box-shadow: 0px 2px 14px 0px rgba(0,0,0,0.5);
+	}
 	&__title{
 		font-size: 1.5em;
 		font-weight: bold;
@@ -220,10 +293,10 @@ img{max-width: 100%;}
 	}
 	&__describe{
 		padding-bottom: 80px;
-		border-bottom: 2px solid  #cccccc;
+		// border-bottom: 2px solid  #cccccc;
 	}
 	&__list{
-		border-bottom: 2px solid  #cccccc;
+		// border-bottom: 2px solid  #cccccc;
 	}
 	&__btn{
 		text-align: left;
@@ -234,13 +307,18 @@ img{max-width: 100%;}
 		}
 	}
 	.btn_demo{
-		outline: 2px solid #f3c128;
+		border: 2px solid #f3c128;
 		color: black;
 		padding: 17px 40px;
 		float: right;
 		position: relative;
 		top: 2px;
-		
+		&:hover{
+			outline:none;
+			color: #fff;
+			background: #363636;
+
+		}
 	}
 	
 	ul{
