@@ -50,7 +50,8 @@ img{
 }
 
 .section{
-	padding-bottom: 140px;
+	padding: 100px 0;
+	position:relative;
 	&-marketplace{
 		padding: 100px 0;
 		background-image: url("../images/background_03.png");
@@ -68,6 +69,22 @@ img{
 			margin: 20px 0;
 		}
 	}
+	.finam-flag{
+		position: absolute;
+		top: 0;
+		left: 0;
+		img{
+			width:40%;
+		}
+	}
+	.liberty{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		img{
+			// width:40%;
+		}
+	}
 }
 
 .header{
@@ -80,14 +97,14 @@ img{
 		text-align: center;
 		padding: 15px 0;
 		border-bottom: 1px solid rgba(255, 255, 255, .2);
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 		@include breakpoint(phablet){
 			text-align: center;
 			padding: 15px 0;
 			margin-bottom: 30px;
 		}
 		img{
-			margin-bottom: 15px;
+			// margin-bottom: 15px;
 			@include breakpoint(phablet){
 				margin: 0;
 				position: relative;
@@ -95,14 +112,14 @@ img{
 			}
 		}
 		a{
-			margin-bottom: 15px;
+			// margin-bottom: 15px;
 			@include breakpoint(phablet){
 				margin:0;
 			}
 		}
 	}
 	&__middle{
-		padding-top: 30px;
+		padding-top: 10px;
 		text-align: center;
 		@include breakpoint(phablet){
 				padding-top: 85px;
@@ -110,10 +127,10 @@ img{
 	}
 	&__bottom{
 		background:rgba(255, 255, 255, .2);
-		padding:20px 0;
+		// padding:20px 0;
 	}
 	&__info{
-		margin-bottom:30px;
+		margin-bottom:20px;
 		@include breakpoint(phablet){
 				margin-bottom:77px;
 		}
@@ -135,10 +152,14 @@ img{
 	text-decoration: none;
 	border-radius: 3px;
 	&_open{
+		padding: 10px 15px;
 		color: #000;
 		background: #f3c128;
 		font-size: 14px;
 		border: 2px solid #f3c128;
+		@include breakpoint(phablet){
+			padding: 15px 20px;
+		}
 		&:hover{
 			border: 2px solid #363636;
 		}
@@ -162,6 +183,8 @@ img{
 	&__red{
 		background-color: #d80303;
 		color: white;
+		border-radius:0;
+		padding: 15px;
 		font-size: 20px;
 		@include breakpoint(mobileonly){
 			font-size: 14px;
@@ -181,6 +204,9 @@ img{
 			top: 2px;
 			left: 5px;
 		}
+	}
+	&_refill{
+		
 	}
 	
 }
@@ -218,7 +244,7 @@ img{
 .why-us-advantage{
 	position:relative;
 	padding-left: 70px;
-	margin-bottom: 20px;
+	// margin-bottom: 20px;
 	@include breakpoint(phablet){
 		margin: 0;
 	}
@@ -229,6 +255,8 @@ img{
 		left:0;
 	}
 	span{
+		display:inline-block;
+		max-width: 270px;
 		color: #fff;
 		line-height: 26px;
 	}
@@ -261,7 +289,143 @@ img{
 		//color: white;
 	}
 	img{
-		
+	}
+}
+ .profit, .refill{
+ 	text-align:center;
+ 	table{
+ 		margin: auto;
+ 		width:80%;
+ 		text-align:center;
+ 		border-collapse: collapse;
+ 		font-size: 12px;
+		@include breakpoint(phablet){
+				font-size: 16px;
+			}
+		@include breakpoint(tablet){
+				font-size: 20px;
+			}
+ 		th{
+ 			font-size:12px;
+ 			text-transform: uppercase;
+ 			padding: 30px 5px;
+			border: 1px solid #d0d0d0;
+			&:first-child,&:last-child{
+				background: #1c1d30;
+				color: #fff;
+
+			}
+			&:nth-child(2),&:nth-child(3){
+				background: #36397a;
+				color: #fff;
+
+			}
+ 		}
+		td{
+			width: 25%;
+			padding: 10px 5px;
+			border: 1px solid #d0d0d0;
+			@include breakpoint(phablet){
+ 				padding: 20px 0;
+ 			}
+ 			@include breakpoint(tablet){
+ 				padding: 30px 0;
+ 			}
+			&:first-child{
+				background: #f1f4f7;
+			}
+ 			&:last-child{
+				color: #1aa000;
+ 			}
+ 		}
+ 	}
+ }
+ .refill{
+ 	table{
+		// font-size: 12px;
+		// @include breakpoint(phablet){
+		// 		font-size: 20px;
+			// }
+ 		th{
+ 			padding: 30px 5px;
+ 			&:last-child{
+				padding: 0;
+ 			}
+ 		}
+ 		tr{
+ 			@include breakpoint(phablet){
+ 				height: 101px;
+ 			}
+ 		}
+		td{
+			text-align:center;
+			width: 25%;
+			padding: 10px 5px;
+ 			border: 1px solid #d0d0d0;
+ 			@include breakpoint(phablet){
+ 				padding: 20px 40px;
+ 			}
+ 			@include breakpoint(tablet){
+ 				padding: 30px 40px;
+ 			}
+ 			&:nth-child(2){
+				width: 50%;
+				font-family:'ProximaNovaBold';
+ 			}
+ 			&:last-child{
+ 				text-align:center;
+				padding: 10px;
+				color: 000;
+				@include breakpoint(phablet){
+						padding: 18px;
+					}
+				@include breakpoint(laptop){
+						padding: 20px;
+					}
+				a{
+		 			display:block;
+		 			text-decoration:none;
+		 			color: #000;
+		 			width:100%;
+ 				}
+				#cross{
+					margin-right: 10px;
+					display: inline-block;
+					background:  #f3c128;
+					height: 15px;
+					position: relative;
+					width: 3px;
+					top: 3px;
+					@media(max-width:501px){
+						top: 0px;
+					}
+					@include breakpoint(phablet){
+						top:-1;
+					}
+					@include breakpoint(tablet){
+						top:1;
+					}
+				}
+				#cross:after {
+					background:  #f3c128;
+					content: "";
+					height: 3px;
+					left: -6px;
+					position: absolute;
+					top: 6px;
+					width: 15px;
+				}
+				&:hover{
+					background: #f3c128;
+					#cross{
+						background: #000;
+					}
+					#cross:after {
+						background: #000;
+					}
+				}
+ 			}
+ 		}
 	}
 }
 
@@ -269,7 +433,7 @@ img{
 	text-align: center;
 	padding: 30px;
 	border-radius: 5px;
-	box-shadow: 0px 2px 10px -5px rgba(0,0,0,0.5);
+	box-shadow: 0px 1px 12px -4px rgba(0,0,0,0.5);
 	hr{
 		border: none;
 		background-color: #ccc;
@@ -278,10 +442,11 @@ img{
 		margin: 0 -30px;
 	}
 	&:hover{
-		box-shadow: 0px 2px 14px 0px rgba(0,0,0,0.5);
+		box-shadow: 0px 1px 14px 0px rgba(0,0,0,0.5);
 	}
 	&__title{
-		font-size: 1.5em;
+		font-family: 'BebasNeue';
+		font-size: 48px;
 		font-weight: bold;
 	}
 	&__name{
@@ -296,23 +461,42 @@ img{
 		// border-bottom: 2px solid  #cccccc;
 	}
 	&__list{
-		// border-bottom: 2px solid  #cccccc;
+		table{
+			width: 100%;
+			border-spacing: 0px 20px;
+			tr{
+				padding: 10px 0;
+			}
+			td:last-child{
+				font-family: 'ProximaNovaBold';
+				text-align: right;
+			}
+			.wider{
+				width:40%;
+			}
+
+		}
 	}
 	&__btn{
 		text-align: left;
 		padding: 40px 0;
 		a{
-			padding: 20px 20px;
+			padding: 10px 15px;
 			font-weight: bold;
+			@include breakpoint(tablet){
+				padding: 15px 20px;
+			}
 		}
 	}
 	.btn_demo{
+		font-size: 14px;
 		border: 2px solid #f3c128;
 		color: black;
-		padding: 17px 40px;
+		padding: 10px 15px;
 		float: right;
-		position: relative;
-		top: 2px;
+		@include breakpoint(tablet){
+			padding: 15px 20px;
+		}
 		&:hover{
 			outline:none;
 			color: #fff;
@@ -348,8 +532,10 @@ img{
 }
 .title{
 	text-align: center;
-	margin: 100px 0;
+	// margin: 100px 0;
 	&__text{
+		font-family: 'BebasNeue';
+
 		font-size: 48px;
 		text-transform: uppercase;
 		margin: 30px 0;
