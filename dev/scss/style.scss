@@ -50,7 +50,8 @@ img{
 }
 
 .section{
-	padding-bottom: 140px;
+	padding: 100px 0;
+	position:relative;
 	&-marketplace{
 		padding: 100px 0;
 		background-image: url("../images/background_03.png");
@@ -68,6 +69,22 @@ img{
 			margin: 20px 0;
 		}
 	}
+	.finam-flag{
+		position: absolute;
+		top: 0;
+		left: 0;
+		img{
+			width:40%;
+		}
+	}
+	.liberty{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		img{
+			// width:40%;
+		}
+	}
 }
 
 .header{
@@ -80,7 +97,7 @@ img{
 		text-align: center;
 		padding: 15px 0;
 		border-bottom: 1px solid rgba(255, 255, 255, .2);
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 		@include breakpoint(phablet){
 			text-align: center;
 			padding: 15px 0;
@@ -102,7 +119,7 @@ img{
 		}
 	}
 	&__middle{
-		padding-top: 30px;
+		padding-top: 10px;
 		text-align: center;
 		@include breakpoint(phablet){
 				padding-top: 85px;
@@ -110,10 +127,10 @@ img{
 	}
 	&__bottom{
 		background:rgba(255, 255, 255, .2);
-		padding:20px 0;
+		// padding:20px 0;
 	}
 	&__info{
-		margin-bottom:30px;
+		margin-bottom:20px;
 		@include breakpoint(phablet){
 				margin-bottom:77px;
 		}
@@ -135,11 +152,14 @@ img{
 	text-decoration: none;
 	border-radius: 3px;
 	&_open{
-		padding: 15px 20px;
+		padding: 10px 15px;
 		color: #000;
 		background: #f3c128;
 		font-size: 14px;
 		border: 2px solid #f3c128;
+		@include breakpoint(phablet){
+			padding: 15px 20px;
+		}
 		&:hover{
 			border: 2px solid #363636;
 		}
@@ -163,6 +183,12 @@ img{
 	&__red{
 		background-color: #d80303;
 		color: white;
+		border-radius:0;
+		padding: 15px;
+		font-size: 20px;
+		@include breakpoint(mobileonly){
+			font-size: 14px;
+		}
 	}
 	&__grey{
 		color: white;
@@ -178,6 +204,9 @@ img{
 			top: 2px;
 			left: 5px;
 		}
+	}
+	&_refill{
+		
 	}
 	
 }
@@ -226,21 +255,61 @@ img{
 		left:0;
 	}
 	span{
+		display:inline-block;
+		max-width: 270px;
 		color: #fff;
-		line-height: 26px;   
+		line-height: 26px;
 	}
 }
- .profit{
+
+
+.offer{
+	background-image: url(../images/background_02.png);
+	background-position: center;
+	padding: 50px 0;
+	&__title{
+		font-size: 36px;
+		text-transform: uppercase;
+		text-align: right;
+		@include breakpoint(mobileonly){text-align: center;}
+		@include breakpoint(laptop){font-size: 62px;}
+		span:first-child{
+			color: #f3c128;
+			
+		}
+		span{display: block;}
+	}
+	&__text{
+		font-size: 24px;
+	}
+	&__btn{
+		border: 2px solid #f3c128;
+		padding: 10px 40px;
+		background-color: transparent;
+		//color: white;
+	}
+	img{
+		
+	}
+}
+ .profit, .refill{
  	text-align:center;
  	table{
  		margin: auto;
- 		width:60%;
+ 		width:80%;
  		text-align:center;
  		border-collapse: collapse;
+ 		font-size: 12px;
+		@include breakpoint(phablet){
+				font-size: 16px;
+			}
+		@include breakpoint(tablet){
+				font-size: 20px;
+			}
  		th{
  			font-size:12px;
  			text-transform: uppercase;
- 			padding: 20px 5px;
+ 			padding: 30px 5px;
 			border: 1px solid #d0d0d0;
 			&:first-child,&:last-child{
 				background: #1c1d30;
@@ -255,8 +324,14 @@ img{
  		}
 		td{
 			width: 25%;
-			padding: 20px 0;
- 			border: 1px solid #d0d0d0;
+			padding: 10px 5px;
+			border: 1px solid #d0d0d0;
+			@include breakpoint(phablet){
+ 				padding: 20px 0;
+ 			}
+ 			@include breakpoint(tablet){
+ 				padding: 30px 0;
+ 			}
 			&:first-child{
 				background: #f1f4f7;
 			}
@@ -266,6 +341,94 @@ img{
  		}
  	}
  }
+ .refill{
+ 	table{
+		// font-size: 12px;
+		// @include breakpoint(phablet){
+		// 		font-size: 20px;
+			// }
+ 		th{
+ 			padding: 30px 5px;
+ 			&:last-child{
+				padding: 0;
+ 			}
+ 		}
+ 		tr{
+ 			@include breakpoint(phablet){
+ 				height: 101px;
+ 			}
+ 		}
+		td{
+			text-align:center;
+			width: 25%;
+			padding: 10px 5px;
+ 			border: 1px solid #d0d0d0;
+ 			@include breakpoint(phablet){
+ 				padding: 20px 40px;
+ 			}
+ 			@include breakpoint(tablet){
+ 				padding: 30px 40px;
+ 			}
+ 			&:nth-child(2){
+				width: 50%;
+				font-family:'ProximaNovaBold';
+ 			}
+ 			&:last-child{
+ 				text-align:center;
+				padding: 10px;
+				color: 000;
+				@include breakpoint(phablet){
+						padding: 18px;
+					}
+				@include breakpoint(laptop){
+						padding: 20px;
+					}
+				a{
+		 			display:block;
+		 			text-decoration:none;
+		 			color: #000;
+		 			width:100%;
+ 				}
+				#cross{
+					margin-right: 10px;
+					display: inline-block;
+					background:  #f3c128;
+					height: 15px;
+					position: relative;
+					width: 3px;
+					top: 3px;
+					@media(max-width:501px){
+						top: 0px;
+					}
+					@include breakpoint(phablet){
+						top:-1;
+					}
+					@include breakpoint(tablet){
+						top:1;
+					}
+				}
+				#cross:after {
+					background:  #f3c128;
+					content: "";
+					height: 3px;
+					left: -6px;
+					position: absolute;
+					top: 6px;
+					width: 15px;
+				}
+				&:hover{
+					background: #f3c128;
+					#cross{
+						background: #000;
+					}
+					#cross:after {
+						background: #000;
+					}
+				}
+ 			}
+ 		}
+	}
+}
 .count-type{
 	text-align: center;
 	padding: 30px;
@@ -282,7 +445,8 @@ img{
 		box-shadow: 0px 1px 14px 0px rgba(0,0,0,0.5);
 	}
 	&__title{
-		font-size: 1.5em;
+		font-family: 'BebasNeue';
+		font-size: 48px;
 		font-weight: bold;
 	}
 	&__name{
@@ -304,23 +468,35 @@ img{
 				padding: 10px 0;
 			}
 			td:last-child{
+				font-family: 'ProximaNovaBold';
 				text-align: right;
 			}
+			.wider{
+				width:40%;
+			}
+
 		}
 	}
 	&__btn{
 		text-align: left;
 		padding: 40px 0;
 		a{
-			padding: 15px 20px;
+			padding: 10px 15px;
 			font-weight: bold;
+			@include breakpoint(tablet){
+				padding: 15px 20px;
+			}
 		}
 	}
 	.btn_demo{
+		font-size: 14px;
 		border: 2px solid #f3c128;
 		color: black;
-		padding: 15px 20px;
+		padding: 10px 15px;
 		float: right;
+		@include breakpoint(tablet){
+			padding: 15px 20px;
+		}
 		&:hover{
 			outline:none;
 			color: #fff;
@@ -346,7 +522,9 @@ img{
 	margin-bottom: 80px;
 	h2{
 		margin: 30px 0;
+		font-size: 20px;
 	}
+	div{font-size: 16px;}
 }
 .wrapper-form{
 	background-color: #f3f3f3;
@@ -354,14 +532,18 @@ img{
 }
 .title{
 	text-align: center;
-	margin: 100px 0;
+	// margin: 100px 0;
 	&__text{
-		font-size: 3em;
+		font-family: 'BebasNeue';
+		font-size: 48px;
 		text-transform: uppercase;
 		margin: 30px 0;
 		font-weight: bold;
 		@include breakpoint(mobileonly){
-			font-size: 2em;
+			font-size: 24px;
+		}
+		@include breakpoint(laptop){
+			font-size: 72px;
 		}
 	}
 }
