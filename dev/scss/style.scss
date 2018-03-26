@@ -301,15 +301,18 @@ img{
  		font-size: 12px;
 		@include breakpoint(phablet){
 				font-size: 16px;
-			}
+		}
 		@include breakpoint(tablet){
 				font-size: 20px;
 			}
  		th{
  			font-size:12px;
  			text-transform: uppercase;
- 			padding: 30px 5px;
+ 			padding: 15px 5px;
 			border: 1px solid #d0d0d0;
+			@include breakpoint(phablet){
+				padding: 30px 5px;
+			}
 			&:first-child,&:last-child{
 				background: #1c1d30;
 				color: #fff;
@@ -347,7 +350,10 @@ img{
 		// 		font-size: 20px;
 			// }
  		th{
- 			padding: 30px 5px;
+ 			padding: 15px 5px;
+ 			@include breakpoint(phablet){
+				padding: 30px 5px;
+			}
  			&:last-child{
 				padding: 0;
  			}
@@ -363,10 +369,10 @@ img{
 			padding: 10px 5px;
  			border: 1px solid #d0d0d0;
  			@include breakpoint(phablet){
- 				padding: 20px 40px;
+ 				padding: 10px 10px;
  			}
  			@include breakpoint(tablet){
- 				padding: 30px 40px;
+ 				padding: 30px 10px;
  			}
  			&:nth-child(2){
 				width: 50%;
