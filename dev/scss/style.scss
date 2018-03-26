@@ -48,7 +48,10 @@ img{
 	margin: 0 5px;
 	font-weight: bold;
 }
-
+.relative{
+	position: relative;
+	top: 40px;
+}
 .section{
 	padding-bottom: 140px;
 	&-marketplace{
@@ -238,7 +241,9 @@ img{
 .offer{
 	background-image: url(../images/background_02.png);
 	background-position: center;
-	padding: 50px 0;
+	background-repeat: repeat-y;
+	vertical-align: bottom;
+	//padding: 20px 0;
 	&__title{
 		font-size: 36px;
 		text-transform: uppercase;
@@ -252,13 +257,19 @@ img{
 		span{display: block;}
 	}
 	&__text{
+		padding-left: 20px;
 		font-size: 24px;
+		position: absolute;
+		top: 40px;
+		color: white;
 	}
 	&__btn{
 		border: 2px solid #f3c128;
 		padding: 10px 40px;
 		background-color: transparent;
-		//color: white;
+		color: white;
+		top: 130px;
+		position: absolute;
 	}
 	img{
 		
