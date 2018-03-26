@@ -48,9 +48,8 @@ img{
 	margin: 0 5px;
 	font-weight: bold;
 }
-.relative{
-	position: relative;
-	top: 40px;
+.center{
+	text-align: center;
 }
 .section{
 	padding: 100px 0;
@@ -267,7 +266,7 @@ img{
 
 
 .offer{
-	background-image: url(../images/background_02.png);
+	background-image: url(../images/background_01.png);
 	background-position: center;
 	background-repeat: repeat-y;
 	vertical-align: bottom;
@@ -277,6 +276,7 @@ img{
 		text-transform: uppercase;
 		text-align: right;
 		@include breakpoint(mobileonly){text-align: center;}
+		@include breakpoint(tablet){font-size: 50px;}
 		@include breakpoint(laptop){font-size: 62px;}
 		span:first-child{
 			color: #f3c128;
@@ -286,20 +286,27 @@ img{
 	}
 	&__text{
 		padding-left: 20px;
-		font-size: 24px;
+		font-size: 22px;
 		position: absolute;
 		top: 40px;
 		color: white;
+		@include breakpoint(tablet){
+			font-size: 24px;
+		}
 	}
 	&__btn{
 		border: 2px solid #f3c128;
 		padding: 10px 40px;
 		background-color: transparent;
 		color: white;
-		top: 130px;
+		top: 67%;
+		left: 20px;
 		position: absolute;
 	}
-	img{
+	&__img{
+		display: inline-block;
+		position: relative;
+		text-align: left;
 	}
 }
  .profit, .refill{
