@@ -256,7 +256,7 @@ img{
 
 
 .offer{
-	background-image: url(../images/background_01.png);
+	background-image: url(../images/background_04.png);
 	background-position: center;
 	background-repeat: repeat-y;
 	vertical-align: bottom;
@@ -272,7 +272,11 @@ img{
 			color: #f3c128;
 			
 		}
-		span{display: block;}
+		span{
+			display: block;
+			font-family: 'BebasNeue';
+			color: #fff;
+		}
 	}
 	&__text{
 		padding-left: 20px;
@@ -625,30 +629,35 @@ form{
 }
 a.trade-4 {
 	margin-bottom: 30px;
-	background: url(../images/mt4.png); /* Путь к файлу с исходным рисунком  */
-    background-size:     cover;                      /* <------ */
+	background: url(../images/mt4.png);
+    background-size: cover;               
     background-repeat:   no-repeat;
     background-position: top center;
-	display: block; /*  Рисунок как блочный элемент */
-	max-width: 100%; /* Ширина рисунка */
-	height:184px; /*  Высота рисунка */
+	display: block; 
+	position:relative;
 	&:hover{
-		background-position:0 -185px;
+		background: url(../images/mt4_hover.png);
+		background-size: contain;
+		background-repeat: no-repeat;
 		}
+	img{
+		opacity: 0;
+	}
 	}
 a.trade-5 {
-	background: url(../images/mt5.png); /* Путь к файлу с исходным рисунком  */
-	background-size: contain;
+	background: url(../images/mt5.png);
+	background-size: cover;
 	background-repeat: no-repeat;
-	display: block; /*  Рисунок как блочный элемент */
-	max-width: 100%; /* Ширина рисунка */
-	height:180px; /*  Высота рисунка */
+	display: block;
+	position:relative;
 	&:hover{
 		background: url(../images/mt5_hover.png);
 		background-size: contain;
 		background-repeat: no-repeat;
-		height:180px;
 		}
+	img{
+		opacity: 0;
+	}
 }
 .logo{
 	text-align:center;
