@@ -57,20 +57,10 @@ img{
 	&-marketplace{
 		padding: 100px 0;
 		background-image: url("../images/background_03.png");
-		.trade{
-			&-4:hover{
-				background-image: url("../images/mt4_hover.png");
-				position: relative;
-				z-index: 10;
-			}
-			&-5{background-image: url("../images/mt5.png");}
-			
-			
 		}
 		img{
 			margin: 20px 0;
 		}
-	}
 	.finam-flag{
 		position: absolute;
 		top: 0;
@@ -452,7 +442,25 @@ img{
  		}
 	}
 }
+.posibilities{
+	text-align:center;
+	ul{
+		vertical-align: top;
+	}
+	li{
+		display:block;
+		margin-bottom: 40px;
+		@include breakpoint(phablet){
+			vertical-align: top;
+			margin: 20px;
+			display:inline-block;
+			max-width:200px;
+		}	
+	}
+}
+.posibility{
 
+}
 .count-type{
 	text-align: center;
 	padding: 30px;
@@ -615,3 +623,56 @@ form{
 	background: #1c1d30;
 	padding: 30px;
 }
+a.trade-4 {
+	margin-bottom: 30px;
+	background: url(../images/mt4.png); /* Путь к файлу с исходным рисунком  */
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: top center;
+	display: block; /*  Рисунок как блочный элемент */
+	max-width: 100%; /* Ширина рисунка */
+	height:184px; /*  Высота рисунка */
+	&:hover{
+		background-position:0 -185px;
+		}
+	}
+a.trade-5 {
+	background: url(../images/mt5.png); /* Путь к файлу с исходным рисунком  */
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: block; /*  Рисунок как блочный элемент */
+	max-width: 100%; /* Ширина рисунка */
+	height:180px; /*  Высота рисунка */
+	&:hover{
+		background: url(../images/mt5_hover.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		height:180px;
+		}
+}
+.logo{
+	text-align:center;
+	background: #fff;
+	padding:30px;
+	color: #000;
+    width: 30%;
+    text-align:center;
+    margin: auto;
+    overflow: hidden; /* clearfix */
+&:before {
+    content: "";
+    padding-top: 100%;
+    float: left;
+} 
+	img{
+		display:block;
+		margin:auto;
+		margin-bottom:20px;
+	}
+}
+// .advantages{
+// 	background: url(../images/background_02.png);
+// 	background-size:auto;
+
+// }
+
