@@ -127,13 +127,79 @@ html
 								a(href="#").btn_refill
 									#cross 
 									span Пополнить
-		.title
-			.title__btn.btn.btn__red Для профессионалов
-			.title__text Фондового рынка
-		.wrapper
+		.section
+			.advantages
+				.wrapper.row.clearfix
+					.col-tablet-1-2.clearfix
+						.title
+							.title__text Наши преимущества
+						.col-phablet-1-2
+							img(src="images/advantage_card.png")
+						.col-phablet-1-2
+							img(src="images/advantage_card.png")
+						.col-phablet-1-2
+							img(src="images/advantage_card.png")
+						.col-phablet-1-2
+							img(src="images/advantage_card.png")
+					.col-tablet-1-2
+		.section
+			.wrapper
 			.title
 				.title__btn.btn.btn__red Покупайте и продавайте
 				.title__text криптовалюту на финам
+			.posibilities
+				ul
+					li
+						.posibility
+							.posibility__icon
+								img(src="images/icon_purchase.png")
+							.posibility__description
+								span
+									|Покупка
+									br
+									|3% от биржевого курса
+					li
+						.posibility
+							.posibility__icon
+								img(src="images/icon_trade.png")
+							.posibility__description
+								span
+									|Продажа
+									br
+									|3% от биржевого курса
+					li
+						.posibility
+							.posibility__icon
+								img(src="images/icon_individual.png")
+							.posibility__description
+								span
+									|Возможны индивидуальные
+									br 
+									|условия при обмене
+									br
+									|больших сумм до 2%
+					li
+						.posibility
+							.posibility__icon
+								img(src="images/icon_in.png")
+							.posibility__description
+								span
+									|Ввод криптовалюты
+									br
+									|на Финам 0%
+					li
+						.posibility
+							.posibility__icon
+								img(src="images/icon_out.png")
+							.posibility__description
+								span
+									|Вывод
+									br
+									|криптовалюты 0,12%
+		.title
+			.title__btn.btn.btn__red Для профессионалов
+			.title__text Фондового рынка
+		
 		.offer
 			.wrapper
 				.row.clearfix
@@ -256,10 +322,8 @@ html
 				.row.clearfix
 					.col-phablet-1-2
 						.title__text Торговые платформы
-						img.trade-4(src="images/mt4.png")
-						img.trade-5(src="images/mt5.png")
-						.trade-4
-						.trade-5
+						a(href="#").trade-4
+						a(href="#").trade-5
 					.col-phablet-1-2
 						div
 							span Скачайте торговое приложение
@@ -268,7 +332,11 @@ html
 							span.strong MetaTrader5
 							span для Wind
 						.col-phablet-1-2
-							img(src="images/windows_logo.png")
+							.logo
+								img(src="images/windows_logo.png")
+								span
+									|WINDOWS
+
 						.col-phablet-1-2
 							img(src="images/windows_logo.png")
 						.col-phablet-1-2
