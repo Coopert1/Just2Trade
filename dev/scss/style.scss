@@ -635,11 +635,36 @@ a.trade-4 {
     background-position: top center;
 	display: block; 
 	position:relative;
+	.baner-text{
+		span{
+			font-size:30px;
+			font-family: 'ProximaNovaBold';
+			color: #fff;
+		}
+		span:last-child{
+			color: #f3c128;
+		}
+		text-align:center;
+		position:absolute;
+		top:50%;
+		left: 50%;
+		margin-left: -85px;
+		margin-top: -19px;
+	}
 	&:hover{
 		background: url(../images/mt4_hover.png);
 		background-size: contain;
 		background-repeat: no-repeat;
+		.baner-text{
+			span{
+				font-family: 'ProximaNovaBold';
+				color: black;
+			}
+			span:last-child{
+				color: #433f8d;
+			}
 		}
+	}
 	img{
 		opacity: 0;
 	}
@@ -650,11 +675,36 @@ a.trade-5 {
 	background-repeat: no-repeat;
 	display: block;
 	position:relative;
+	.baner-text{
+		span{
+			font-size:30px;
+			font-family: 'ProximaNovaBold';
+			color: #fff;
+		}
+		span:last-child{
+			color: #f3c128;
+		}
+		text-align:center;
+		position:absolute;
+		top:50%;
+		left: 50%;
+		margin-left: -85px;
+		margin-top: -19px;
+	}
 	&:hover{
 		background: url(../images/mt5_hover.png);
 		background-size: contain;
 		background-repeat: no-repeat;
+		.baner-text{
+			span{
+				font-family: 'ProximaNovaBold';
+				color: black;
+			}
+			span:last-child{
+				color: #433f8d;
+			}
 		}
+	}
 	img{
 		opacity: 0;
 	}
@@ -662,9 +712,9 @@ a.trade-5 {
 .logo{
 	text-align:center;
 	background: #fff;
-	padding:30px;
+	// padding:30px;
 	color: #000;
-    width: 30%;
+	border-radius:4px;
     text-align:center;
     margin: auto;
     overflow: hidden; /* clearfix */
@@ -678,6 +728,10 @@ a.trade-5 {
 		margin:auto;
 		margin-bottom:20px;
 	}
+}
+.logos{
+	position:relative;
+	top:10px;
 }
 // .advantages{
 // 	background: url(../images/background_02.png);
