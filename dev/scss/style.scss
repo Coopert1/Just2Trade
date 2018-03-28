@@ -45,7 +45,8 @@ img{
 	max-width: 100%;
 }
 .strong{
-	margin: 0 5px;
+	// margin: 0 5px;
+	font-family: 'ProximaNovaBold';
 	font-weight: bold;
 }
 .center{
@@ -57,6 +58,9 @@ img{
 	&-marketplace{
 		padding: 100px 0;
 		background-image: url("../images/background_03.png");
+		.text{
+			font-size: 18px;
+		}
 		}
 		img{
 			margin: 20px 0;
@@ -695,6 +699,9 @@ img{
 		@include breakpoint(laptop){
 			font-size: 72px;
 		}
+		&_market-place{
+			margin: 0 0 30px 0;
+		}	
 	}
 }
 form{
@@ -803,6 +810,7 @@ a.trade-5 {
 	&:hover{
 		background: url(../images/mt5_hover.png);
 		background-size: contain;
+		background-position-x:1px;
 		background-repeat: no-repeat;
 		.baner-text{
 			span{
@@ -821,17 +829,30 @@ a.trade-5 {
 .logo{
 	text-align:center;
 	background: #fff;
-	// padding:30px;
 	color: #000;
 	border-radius:4px;
     text-align:center;
+    vertical-align:middle;
+    position:relative;
     margin: auto;
-    overflow: hidden; /* clearfix */
-&:before {
-    content: "";
-    padding-top: 100%;
-    float: left;
-} 
+    overflow: hidden;
+	&:before {
+		content: "";
+		padding-top: 100%;
+		float: left;
+	}
+	&:hover{
+		background: #f3c128;
+	}
+	.content{
+		width:120px;
+		display:inline-block;
+		position:absolute;
+		top:50%;
+		left:50%;
+		margin-left:-60px;
+		margin-top:-50px;
+	}
 	img{
 		display:block;
 		margin:auto;
@@ -840,7 +861,12 @@ a.trade-5 {
 }
 .logos{
 	position:relative;
-	top:10px;
+	@media (min-width:600px){top:22px;}
+	@media (min-width:723px){top:45px;}
+	@media (min-width:766px){top:-4px;}
+	@media (min-width:1007px){top:17px;}
+	@media (min-width:1024px){top:114px;}
+	@media (min-width:1118px){top:42px;}
 }
 // .advantages{
 // 	background: url(../images/background_02.png);
