@@ -701,7 +701,10 @@ img{
 		}
 		&_market-place{
 			margin: 0 0 30px 0;
-		}	
+			@include breakpoint(mobileonly){
+			font-size: 72px;
+			}	
+		}
 	}
 }
 form{
@@ -784,7 +787,7 @@ a.trade-4 {
 	img{
 		opacity: 0;
 	}
-	}
+}
 a.trade-5 {
 	background: url(../images/mt5.png);
 	background-size: cover;
@@ -868,9 +871,12 @@ a.trade-5 {
 	@media (min-width:1024px){top:114px;}
 	@media (min-width:1118px){top:42px;}
 }
-// .advantages{
-// 	background: url(../images/background_02.png);
-// 	background-size:auto;
-
-// }
-
+.graph{
+	padding-top: 430px;
+	margin-top: -414px;
+	margin-bottom:100px;
+	background:url(../images/main_graph.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: cover;
+}
