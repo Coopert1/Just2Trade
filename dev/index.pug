@@ -135,22 +135,22 @@ html
 							.title
 								.title__text Наши преимущества
 							.advantagelist__wrap-inner.clearfix
-								.col-phablet-1-2
+								.col-phablet-1-2.col-mobileonly-1-2
 									.advantagelist__img
 										img(src="images/advantage_card.png")
 										.advantagelist__title 1:500
 										.advantagelist__text Плечо до
-								.col-phablet-1-2
+								.col-phablet-1-2.col-mobileonly-1-2
 									.advantagelist__img
 										img(src="images/advantage_card.png")
 										.advantagelist__title 0.01
 										.advantagelist__text Минимальный лот
-								.col-phablet-1-2
+								.col-phablet-1-2.col-mobileonly-1-2
 									.advantagelist__img
 										img(src="images/advantage_card.png")
 										.advantagelist__title 0
 										.advantagelist__text Спред от
-								.col-phablet-1-2
+								.col-phablet-1-2.col-mobileonly-1-2
 									.advantagelist__img
 										img(src="images/advantage_card.png")
 										.advantagelist__title $2
@@ -218,10 +218,6 @@ html
 									|Вывод
 									br
 									|криптовалюты 0,12%
-		.title
-			.title__btn.btn.btn__red Для профессионалов
-			.title__text Фондового рынка
-		
 		.offer
 			.wrapper
 				.row.clearfix
@@ -241,7 +237,7 @@ html
 					.title__btn.btn.btn__red выберите наиболее подходящий для вас
 					.title__text Тип торговых счетов
 				.row.clearfix
-					.col-tablet-1-2.col-laptop-1-3
+					.col-tablet-1-2.col-laptop-1-3.count-type-block
 						.count-type
 							.count-type__title Forex и CFD Standart
 							.count-type__name standart
@@ -272,7 +268,7 @@ html
 							.count-type__btn
 								a.btn.btn_open(href="#") Открыть счет
 								a.btn.btn_demo(href="#") Демо
-					.col-tablet-1-2.col-laptop-1-3
+					.col-tablet-1-2.col-laptop-1-3.count-type-block
 						.count-type
 							.count-type__title Forex и CFD Standart
 							.count-type__name premium
@@ -303,7 +299,7 @@ html
 							.count-type__btn
 								a.btn.btn_open(href="#") Открыть счет
 								a.btn.btn_demo(href="#") Демо
-					.col-tablet-1-2.col-laptop-1-3
+					.col-tablet-1-2.col-laptop-1-3.count-type-block
 						.count-type
 							.count-type__title Forex и CFD Standart
 							.count-type__name pro
@@ -344,6 +340,15 @@ html
 				.row.clearfix
 					.col-phablet-1-2
 						.title__text.title__text_market-place Торговые платформы
+					.col-phablet-1-2.text_phablet
+						.text.text_phablet
+							span Скачайте торговое приложение
+							span.strong   MetaTrader4
+							span   и
+							span.strong   MetaTrader5
+							span   для Windows и других мобильных устройств
+				.row.clearfix
+					.col-phablet-1-2
 						a(href="#").trade-4
 							img(src="images/mt4.png")
 							.baner-text
@@ -357,12 +362,12 @@ html
 									|MetaTrader
 								span   5
 					.col-phablet-1-2
-						.text
-							span Скачайте торговое приложение
-							span.strong   MetaTrader4
-							span   и
-							span.strong   MetaTrader5
-							span   для Windows и других мобильных устройств
+						.text.text_mobile
+								span Скачайте торговое приложение
+								span.strong   MetaTrader4
+								span   и
+								span.strong   MetaTrader5
+								span   для Windows и других мобильных устройств
 						.clearfix.row.logos
 							.col-mobileonly-1-2.col-phablet-1-2
 								.logo
@@ -422,7 +427,7 @@ html
 			.wrapper
 				.title
 					.title__btn.btn.btn__red Отправте заявку на открытие
-					.title__text индывыдуального счета
+					.title__text индивидуального счета
 					
 				form
 					.form__wrap
@@ -430,7 +435,7 @@ html
 						label(for="start-form") Продолжыть заполнение анкети
 					.row.clearfix
 						.col-phablet-1-2.col-tablet-1-3
-							input(type="text" placeholder="Фамилія *")
+							input(type="text" placeholder="Фамилия *")
 							input(type="text" placeholder=" Имя *")
 							input(type="text" placeholder="Отчество")
 						.col-phablet-1-2.col-tablet-1-3
