@@ -53,6 +53,8 @@
 [class*='col-']{
 	padding: 15px;
 	min-height: 1px;
+	@include breakpoint( mobileonly){padding: 5px;}
+	
 
 }
 
