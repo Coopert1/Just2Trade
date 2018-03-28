@@ -690,6 +690,10 @@ img{
 		@include breakpoint(laptop){
 			padding-left: 45px;
 		}
+		.btn_open{
+			position: relative;
+			bottom: 10px;
+		}
 		
 	}
 	&__vip__text{
@@ -744,6 +748,7 @@ img{
 		border-radius: 5px;
 		background-color: white;
 		padding: 20px 0 20px 20px;
+	
 		@include breakpoint(phablet){text-align: center;}
 		@include breakpoint(tablet){text-align: left;}
 		@include breakpoint(laptop){
@@ -752,15 +757,32 @@ img{
 		&__big-text{
 			font-size: 48px;
 			text-transform: uppercase;
+			@include breakpoint(tablet){
+				font-size: 36px;
+				margin-top: 10px;
+			}
 			@include breakpoint(laptop){
 				margin: 29px 0;
-				font-size: 56px;
+				font-size: 46px;
+				border: 20px;
 			}
 			@include breakpoint(mobileonly){
 				font-size: 36px;
 				margin: 20px 0;
 			}
-			
+		}
+		
+		@include breakpoint(tablet){
+			.btn_open{
+				position: relative;
+				bottom: -10px;
+			}
+		}
+		@include breakpoint(laptop){
+			.btn_open{
+				bottom: 20px;
+				
+			}
 		}
 	}
 }
