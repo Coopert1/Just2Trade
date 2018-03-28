@@ -177,14 +177,14 @@ img{
 		background: linear-gradient(to right, rgba(239,55,0,1) 0%,rgba(217,6,3,1) 100%);
 		color: #fff;
 		font-size: 45px;
-		margin-bottom: 30px; 
+		margin-bottom: 30px;
 		border-radius: 0;
 		border: 1px solid #d90603;
 		padding-bottom: 10px;
 		// display:block;
 		@include breakpoint(phablet){
 			font-size: 75px;
-			margin-bottom: 30px; 
+			margin-bottom: 30px;
 			padding-bottom: 6px;
 		}
 	}
@@ -501,7 +501,7 @@ img{
 			margin: 20px;
 			display:inline-block;
 			max-width:200px;
-		}	
+		}
 	}
 }
 .count-type-block{
@@ -562,7 +562,7 @@ img{
 			}
 
 		}
-	}	
+	}
 	&__btn{
 		text-align: left;
 		padding: 30px 0;
@@ -599,16 +599,22 @@ img{
 .advantagelist{
 	background-image: url(../images/background_02.png);
 	background-repeat: no-repeat;
-	padding-top: 70%;
-	margin-top: -586px;
-	@media (min-width:700px){padding-top: 60%;}
-	@media (min-width:800px){padding-top: 52%;}
-	@media (min-width:930px){padding-top: 46%;}
-	@media (min-width:1100px){padding-top: 38%;}
+	margin-top: -850px;
+	padding-top: 700px;
+	background-position: bottom;
+	background-size: cover;
+	padding-bottom: 100px;
+
 	
 	@include breakpoint(mobileonly){
 		text-align: center;
-		margin-top: -450px;
+		margin-top: -780px;
+	}
+	@include breakpoint(tablet){
+		margin-top: -650px;
+	}
+	@include breakpoint(laptop){
+		margin-top: -700px;
 	}
 	img{
 		margin: 0;
@@ -622,8 +628,14 @@ img{
 	.title__text{
 		margin-bottom: 0;
 		
-		@media (min-width:700px) and (max-width: 800px){margin-bottom: 30px;}
-		@include breakpoint(laptop){margin: 0 0 42px 0;}
+//		@media (min-width:700px) and (max-width: 800px){margin-bottom: 30px;}
+		@include breakpoint(tablet){
+			margin-bottom: 40px;
+		}
+		@include breakpoint(laptop){
+			margin: 0 0 50px 0;
+			font-size: 62px;
+		}
 	}
 	&__title{
 		font-size: 48px;
@@ -631,12 +643,17 @@ img{
 		left: 20px;
 		color: white;
 		position: absolute;
+		@include breakpoint(mobileonly){
+			font-size: 36px;
+			top: 10px;
+			left: 10px;
+		}
 		@include breakpoint(tablet){
 			font-size: 28px;
 		
 		}
 		@include breakpoint(laptop){
-			font-size: 72px;
+			font-size: 52px;
 		
 		}
 		
@@ -647,6 +664,13 @@ img{
 		position: absolute;
 		left: 20px;
 		bottom: 20px;
+		@include breakpoint(mobileonly){
+			font-size: 16px;
+			bottom: 10px;
+			left: 10px;
+			text-align: left;
+			line-height: 1;
+		}
 		
 		@include breakpoint(tablet){
 			font-size: 14px;
@@ -660,29 +684,71 @@ img{
 		background-color: white;
 		padding: 20px 0 20px 20px;
 		margin-bottom: 20px;
-		
+		border-radius: 5px;
 		@include breakpoint(phablet){text-align: center;}
 		@include breakpoint(tablet){text-align: left;}
 		@include breakpoint(laptop){
 			padding-left: 45px;
 		}
+		.btn_open{
+			position: relative;
+			bottom: 10px;
+		}
 		
 	}
 	&__vip__text{
 		font-size: 20px;
+
+		
 		
 	}
 	&__vip__big-text{
 		font-size: 48px;
 		color: #f3c128;
+		position: relative;
+		overflow: hidden;
+		&:after{
+			content: "";
+			background-color: #f3c128;
+			display: inline-block;
+			height: 3px;
+			position: absolute;
+			top: 24px;
+			width: 300px;
+		}
+		
 		@include breakpoint(mobileonly){
 			font-size: 40px;
+			&:before{
+				content: "";
+				background-color: #f3c128;
+				display: inline-block;
+				height: 3px;
+				position: absolute;
+				top: 24px;
+				width: 300px;
+				margin-left: -300px;
+			}
+		
+		}
+		@include breakpoint(phablet){
+			&:before{
+				content: "";
+				background-color: #f3c128;
+				display: inline-block;
+				height: 3px;
+				position: absolute;
+				top: 24px;
+				width: 300px;
+				margin-left: -300px;
+			}
 		}
 	}
 	&__try{
-		
+		border-radius: 5px;
 		background-color: white;
 		padding: 20px 0 20px 20px;
+	
 		@include breakpoint(phablet){text-align: center;}
 		@include breakpoint(tablet){text-align: left;}
 		@include breakpoint(laptop){
@@ -691,15 +757,32 @@ img{
 		&__big-text{
 			font-size: 48px;
 			text-transform: uppercase;
+			@include breakpoint(tablet){
+				font-size: 36px;
+				margin-top: 10px;
+			}
 			@include breakpoint(laptop){
 				margin: 29px 0;
-				font-size: 56px;
+				font-size: 46px;
+				border: 20px;
 			}
 			@include breakpoint(mobileonly){
 				font-size: 36px;
 				margin: 20px 0;
 			}
-			
+		}
+		
+		@include breakpoint(tablet){
+			.btn_open{
+				position: relative;
+				bottom: -10px;
+			}
+		}
+		@include breakpoint(laptop){
+			.btn_open{
+				bottom: 20px;
+				
+			}
 		}
 	}
 }
@@ -728,7 +811,7 @@ img{
 			margin: 0 0 30px 0;
 			@include breakpoint(mobileonly){
 			font-size: 72px;
-			}	
+			}
 		}
 	}
 }
@@ -776,10 +859,10 @@ form{
 a.trade-4 {
 	margin-bottom: 30px;
 	background: url(../images/mt4.png);
-    background-size: cover;               
+    background-size: cover;
     background-repeat:   no-repeat;
     background-position: top center;
-	display: block; 
+	display: block;
 	position:relative;
 	.baner-text{
 		span{
